@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	t "github.com/vikash/learning-golang/002-struct-interface/006-embedding/types"
+	t "github.com/Chennai-Golang/learning-golang/002-struct-interface/006-embedding/types"
 )
 
 func main() {

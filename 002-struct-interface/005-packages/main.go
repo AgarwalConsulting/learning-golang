@@ -1,6 +1,6 @@
 package main
 
-import S "github.com/vikash/learning-golang/002-struct-interface/005-packages/Shapes"
+import S "github.com/Chennai-Golang/learning-golang/002-struct-interface/005-packages/Shapes"
 
 func main() {
 
