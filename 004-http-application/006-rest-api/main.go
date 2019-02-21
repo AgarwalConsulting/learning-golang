@@ -1,20 +1,21 @@
 package main
 
 import (
+	"log"
+	"net/http"
+
 	"github.com/Chennai-Golang/learning-golang/004-http-application/006-rest-api/blog"
-	"github.com/zopnow/z"
-	"os"
+	"github.com/gorilla/mux"
 )
 
-var handlers = z.Handlers{
-	"post": blog.PostHandler{},
-}
-
-var config = z.Config{
-	ServerPort: 8001,
-	Database:   z.MysqlConfig{os.Getenv("DB_HOST"), os.Getenv("DB_USER"), os.Getenv("DB_PASSWORD"), "test"},
-}
+var port = "8000"
 
 func main() {
-	z.Service{Handlers: handlers, Config: &config}.Run()
+	r := mux.NewRouter()
+
+	r.HandleFunc("/posts", blog.GetPostsHandler).Methods("GET")
+
+	http.Handle("/", r)
+
+	log.Fatal(http.ListenAndServe(":"+port, r))
 }
