@@ -13,10 +13,10 @@ func (r Rectangle) Area() int {
 
 // Square represents a square shape
 type Square struct {
-	length int
+	Length int
 }
 
 // Area calculates the area of square
 func (s Square) Area() int {
-	return s.length * s.length
+	return s.Length * s.Length
 }

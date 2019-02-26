@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Chennai-Golang/learning-golang/003-concurrency/functions"
+	"github.com/AgarwalConsulting/learning-golang/003-concurrency/functions"
 	"time"
 )
 

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Chennai-Golang/learning-golang/002-struct-interface/009-access-control/shapes"
+	"github.com/AgarwalConsulting/learning-golang/002-struct-interface/009-access-control/shapes"
 )
 
 func main() {

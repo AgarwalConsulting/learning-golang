@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/Chennai-Golang/learning-golang/004-http-application/006-rest-api/blog"
+	"github.com/AgarwalConsulting/learning-golang/004-http-application/006-rest-api/blog"
 	"github.com/gorilla/mux"
 )
 
