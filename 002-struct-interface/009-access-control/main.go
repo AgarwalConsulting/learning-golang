@@ -6,12 +6,22 @@ import (
 	"github.com/AgarwalConsulting/learning-golang/002-struct-interface/009-access-control/shapes"
 )
 
+func printGeometry(g shapes.Geometry) {
+	fmt.Printf("Area of %T: %d\n", g, g.Area())
+	fmt.Printf("Scale Area of %T by 5: %d\n", g, g.ScaleArea(5))
+}
+
 func main() {
-	rect := shapes.Rectangle{20, 10}
+	rect := shapes.Rectangle{Width: 20, Height: 10}
 
-	fmt.Println(rect.Area())
+	printGeometry(rect)
+	// fmt.Println(rect.Area())
 
-	square := shapes.Square{10}
+	// var square shapes.Square
+	square := shapes.Square{Length: 10}
 
-	fmt.Println(square.Area())
+	printGeometry(square)
+	// fmt.Println(square.Area())
+
+	fmt.Println(square.ScaleArea(5))
 }
