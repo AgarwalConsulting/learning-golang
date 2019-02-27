@@ -15,7 +15,5 @@ func main() {
 
 	r.HandleFunc("/posts", blog.GetPostsHandler).Methods("GET")
 
-	http.Handle("/", r)
-
 	log.Fatal(http.ListenAndServe(":"+port, r))
 }
