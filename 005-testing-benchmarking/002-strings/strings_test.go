@@ -1,16 +1,17 @@
 package test
 
 import (
-	"fmt"
 	"strings"
 	"testing"
 )
 
+var split []string
+
 func BenchmarkSplit(b *testing.B) {
-	var split []string
+	var localSplit []string
 	for i := 0; i < b.N; i++ {
-		split = strings.Split("one,two,three,four,five,six,seven", ",")
+		localSplit = strings.Split("one,two,three,four,five,six,seven", ",")
 	}
 
-	fmt.Println(split)
+	split = localSplit
 }

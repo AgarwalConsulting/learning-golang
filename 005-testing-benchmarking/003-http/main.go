@@ -4,10 +4,10 @@ import (
 	"log"
 	"net/http"
 
+	_ "net/http/pprof"
+
 	"github.com/AgarwalConsulting/learning-golang/004-http-application/006-rest-api/blog"
 	"github.com/gorilla/mux"
-
-	_ "net/http/pprof"
 )
 
 var port = "8000"

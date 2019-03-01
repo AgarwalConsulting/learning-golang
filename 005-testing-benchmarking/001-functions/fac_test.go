@@ -9,6 +9,16 @@ import "testing"
 // go tool cover -func=coverage.out		Function wise coverage from the output file.
 // go tool cover -html=coverage.out		Detailed coverage in Browser
 
+func TestSimpleFac(t *testing.T) {
+	input := 5
+	output := 120
+
+	r := fac(input)
+
+	if output != r {
+		t.Fatalf("Factorial %v: Expected %v, Got %v ", input, output, r)
+	}
+}
 func TestFac(t *testing.T) {
 	tests := []struct {
 		input  int
