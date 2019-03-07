@@ -55,14 +55,20 @@ func TestFacr(t *testing.T) {
 	}
 }
 
+var result int
+
 func BenchmarkFac20(b *testing.B) {
+	var innerResult int
 	for i := 0; i <= b.N; i++ {
-		fac(20)
+		innerResult = fac(20)
 	}
+	result = innerResult
 }
 
 func BenchmarkFacr20(b *testing.B) {
+	var innerResult int
 	for i := 0; i <= b.N; i++ {
-		facr(20)
+		innerResult = facr(20)
 	}
+	result = innerResult
 }
